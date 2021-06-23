@@ -1,6 +1,6 @@
 Files already downloaded and verified
 setting parameters for standard version
-using standard version including apgd-ce, apgd-t, fab-t, square
+using standard version including apgd-ce, apgd-t, fab-t
 initial accuracy: 86.78%
 apgd-ce - 1/68 - 14 out of 128 successfully perturbed
 apgd-ce - 2/68 - 15 out of 128 successfully perturbed
