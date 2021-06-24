@@ -212,11 +212,9 @@ class LWTA(nn.Module):
         self.inplace = inplace
         self.temperature = -.01
         self.temp_test = 0.01
-        self.deterministic = deterministic
         self.kl_ = 0.
         self.U = U
         self.temp = Parameter(torch.tensor(self.temperature))
-        #self.params = nn.ParameterList([self.temp])
 
     def forward(self, input):
         out, kl = lwta_activation(input, U = self.U, training = self.training,
