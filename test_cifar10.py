@@ -42,8 +42,7 @@ def main():
 
     if args.autoattack:
 
-        w=1
-        l = 6
+        w=5
         
         path = 'model-cifar-wideResNet/ckpt.pt'
 
