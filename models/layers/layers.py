@@ -210,15 +210,14 @@ class LWTA(nn.Module):
     def __init__(self, inplace = True, U=2):
         super(LWTA, self).__init__()
         self.inplace = inplace
-        self.temperature = -.01
+        self.temp = .67
         self.temp_test = 0.01
         self.kl_ = 0.
         self.U = U
-        self.temp = Parameter(torch.tensor(self.temperature))
 
     def forward(self, input):
         out, kl = lwta_activation(input, U = self.U, training = self.training,
-                                  temperature = F.softplus(self.temp),
+                                  temperature = self.temp,
                                   temp_test = self.temp_test)
         self.kl_ = kl
 
